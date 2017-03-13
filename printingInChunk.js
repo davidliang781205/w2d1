@@ -22,13 +22,6 @@ function getAndPrintHTMLChunks () {
   // the callback is invoked when a `data` chunk is received
   response.on('data', (data) => console.log('Chunk Received: \n', data));
 
-  // the callback is invoked when all of the data has been received
-  // (the `end` of the stream)
-  response.on('end', function() {
-    console.log('Response stream complete.');
-  });
-
-  response.on('finish', (finish) => console.log(finish));
 
 });
 
