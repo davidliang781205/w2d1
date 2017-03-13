@@ -13,10 +13,10 @@ module.exports = function getHTML (options, callback) {
       response.on('error', (error) => console.log(error));
 
 
-      response.on('data', (data) => (result += data ));
+      response.on('data', (data) => (result += data));
 
 
-      response.on('end', (end) => printHTML(result));
+      response.on('end', (end) => callback(result) );
 
 
     });
